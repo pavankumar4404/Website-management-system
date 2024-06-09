@@ -1,0 +1,91 @@
+//Model
+import mongoose from 'mongoose';
+
+
+const reportDetailSchema = mongoose.Schema(
+  {
+    vulId: {
+      type: String,
+      default: null,
+    },
+    reportedDate: {
+      type: Date,
+      default: null,
+    },
+    subject: {
+      type: String,
+    },
+    document: {
+      type: String,
+    },
+    vulStatus: {
+      type: String,
+    },
+    action: {
+      type: String,
+    },
+    actionStatus: {
+      type: String,
+    },
+  },
+);
+
+
+const bookSchema = mongoose.Schema(
+  {
+    websiteUrl: {
+      type: String,
+      required: true,
+    },
+    websiteName: {
+      type: String,
+      required: true,
+    },
+    department: {
+      type: String,
+      required: true,
+    },
+    ipAddress: {
+      type: String,
+      required: true,
+    },
+    ssl: {
+      type: String,
+      required: true,
+    },
+    securityAudit: {
+      type: String,
+      required: true,
+    },
+    hodName: {
+      type: String,
+      required: true,
+    },
+    osName: {
+      type: String,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+    vulTotal: {
+      type: String,
+      required: true,
+    },
+    vulOpened: {
+      type: String,
+      required: true,
+    },
+    vulClosed: {
+      type: String,
+      required: true,
+    },
+    reportDetail: [reportDetailSchema],
+  },
+  {
+    timestamps: true,
+  }
+);
+
+export const Book = mongoose.model('Book', bookSchema);
