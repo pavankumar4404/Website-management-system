@@ -37,7 +37,7 @@ function Dashboard() {
                 <div className="card">
                     <div className="card-header">
                         <div className="card-header-color orange-dark"></div>
-                        <div className="card-header-text">Email Master</div>
+                        <div className="card-header-text">Email Management</div>
                     </div>
                 </div>
                 </a>
